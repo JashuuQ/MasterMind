@@ -14,6 +14,7 @@ Make sure Python is installed on your system. No additional installation is requ
 运行主程序：
 ```bash
 python source/mastermind_game.py
+```
 
 ## 游戏截图 (Screenshots) 
 ![Sorry, cannot show the screenshots.](source/assets/screenshots.jpg)
