@@ -1,7 +1,7 @@
 # Mastermind Game
 
 ## 简介 (Introduction)
-Mastermind Game 是一个基于 Python 的经典猜谜游戏，玩家需要在六个不同的颜色中选出由四种颜色组成的正确组合。
+Mastermind Game 是一个基于 Python 的经典猜谜游戏，玩家需在六个不同颜色中选出由四种颜色组成的正确组合。
 
 Mastermind Game is a classic puzzle game based on Python, where players need to select four out of six different colors and combine them into the correct color combination.
 
