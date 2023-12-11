@@ -16,7 +16,7 @@ sys.path.append(parent_dir)
 
 from game_view import GameView
 from game_engine import GameEngine
-from game_board import LeaderBoard
+from entities.board import LeaderBoard
 from config.window_constants import WindowConstants
 
 def turtle_setup():
@@ -55,16 +55,18 @@ def set_basic_board(game_engine, game_view,
     Returns: None
     """
     leaderboard_data = leader_board.read_leader_board()
+    if isinstance(leaderboard_data, dict):
+        game_view.load_leaderboard(leaderboard_data)
+    
+    game_view.draw_rectangles()
+    game_view.draw_text()
+    game_view.update_view(game_engine)
+
     if leaderboard_data == 'FileNotFound':
         game_view.show_leaderboard_error()
         screen.ontimer(
             game_view.close_leaderboard_error_popup, 2000)
-        
-    game_view.draw_rectangles()
-    game_view.draw_text()
-    if isinstance(leaderboard_data, dict):
-        game_view.load_leaderboard(leaderboard_data)
-    game_view.update_view(game_engine)
+        screen.update()
     
 def lose_and_show_code(screen, game_engine):
     """
@@ -144,6 +146,7 @@ def handle_click(x, y, screen, game_engine, game_view):
     game_view.update_blank_marbles(game_engine)
     game_view.update_click_marbles(game_engine)
 
+    turtle.update()
 
 def main():
     """
@@ -181,6 +184,7 @@ def main():
         if game_engine.game_over:
             new_score = game_engine.line_count
             leader_board.update_leaderboard(new_score, new_name)
+    
     screen.onscreenclick(on_screen_click)
 
     turtle.mainloop()

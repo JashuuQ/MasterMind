@@ -14,5 +14,5 @@ class PopConstants:
     QUITMSG_PATH = 'assets/quitmsg.gif'
     WINNER_PATH = 'assets/winner.gif'
 
-    LEADERBOARD_FILE = "leaderboard.txt"
+    LEADERBOARD_FILE = "docs/leaderboard.txt"
     MAX_ENTRIES = 5  # The max number of leaderboard entries

@@ -160,7 +160,6 @@ class GameView:
         Returns: None
         """
         self.draw_marbles(game_engine.signal_marbles)
-        turtle.update()
 
     def update_blank_marbles(self, game_engine):
         """
@@ -170,7 +169,6 @@ class GameView:
         Returns: None
         """
         self.draw_marbles(game_engine.blank_marbles)
-        turtle.update()
 
     def update_click_marbles(self, game_engine):
         """
@@ -180,7 +178,6 @@ class GameView:
         Returns: None
         """
         self.draw_marbles(game_engine.click_marbles)
-        turtle.update()
 
     def update_cursor(self, cursor):
         """
@@ -264,7 +261,7 @@ class GameView:
         self.show_general_popup(
             PopConstants.LEADERBOARD_ERR_PATH)
         
-    def close_leaderboard_error_popup(self):
+    def close_leaderboard_error_popup(self, screen):
         """
         Method - closes the leaderboard error popup.
         Parameters: None
@@ -273,4 +270,6 @@ class GameView:
         if self.popup_turtle:
             self.popup_turtle.hideturtle()
             self.popup_turtle.clear()
-            self.popup_turtle = None
+            self.popup_turtle.update()
+            
+        
