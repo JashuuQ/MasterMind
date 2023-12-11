@@ -139,7 +139,7 @@ class GameEngine:
             x += MarbleConstants.MARBLE_GAP_3
         return [click_marbles]
 
-    def check_config_exists(self, config_folder):
+    def check_config_exists(self):
         """
         Method - checks if configuration files exist in the specified folder.
         Parameters:
@@ -149,7 +149,7 @@ class GameEngine:
         missing_files = []
         for file_name in CONFIG_FILES:
             try:
-                with open(f"{config_folder}/{file_name}") as f:
+                with open(f"{'source/config'}/{file_name}") as f:
                     pass
             except FileNotFoundError:
                 missing_files.append(file_name)

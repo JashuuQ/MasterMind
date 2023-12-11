@@ -5,14 +5,7 @@
     File name:      mastermind_game.py
     Description:    This is the main function of our mastermind game.
 """
-
 import turtle as turtle
-import sys
-import os
-
-current_dir = os.path.dirname(__file__)
-parent_dir = os.path.dirname(current_dir)
-sys.path.append(parent_dir)
 
 from game_view import GameView
 from game_engine import GameEngine
@@ -163,7 +156,7 @@ def main():
     new_name = get_player_name(screen)
     game_view.set_screen(screen)
 
-    if not game_engine.check_config_exists("config"):
+    if not game_engine.check_config_exists():
         game_view.show_file_error()
         screen.ontimer(lambda: screen.bye(), 1500)
         return

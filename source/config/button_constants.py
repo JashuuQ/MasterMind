@@ -7,9 +7,9 @@ class ButtonConstants:
     Stores constant values related to 
         the buttons used in the Mastermind game interface.
     """
-    CHECK_BUTTON_PATH = 'assets/checkbutton.gif'
-    XBUTTON_PATH = 'assets/xbutton.gif'
-    QUIT_BUTTON_PATH = 'assets/resized_quit.gif'
+    CHECK_BUTTON_PATH = 'source/assets/checkbutton.gif'
+    XBUTTON_PATH = 'source/assets/xbutton.gif'
+    QUIT_BUTTON_PATH = 'source/assets/resized_quit.gif'
 
     CHECK_BUTT_POS = (65, -282)
     XBUTTON_BUTT_POS = (145, -282)
