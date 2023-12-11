@@ -261,7 +261,7 @@ class GameView:
         self.show_general_popup(
             PopConstants.LEADERBOARD_ERR_PATH)
         
-    def close_leaderboard_error_popup(self, screen):
+    def close_leaderboard_error_popup(self):
         """
         Method - closes the leaderboard error popup.
         Parameters: None
@@ -270,6 +270,6 @@ class GameView:
         if self.popup_turtle:
             self.popup_turtle.hideturtle()
             self.popup_turtle.clear()
-            self.popup_turtle.update()
+            turtle.update()
             
         
